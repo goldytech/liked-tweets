@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"appId": "liked-tweets",
+			"appPort": 8000,
+			"componentsPath": "components",
+			"httpPort": 3500,
+			"grpcPort": 50001,
+			"label": "daprd-debug",
+			"type": "daprd"
+		},
+		{
+			"appId": "liked-tweets",
+			"label": "daprd-down",
+			"type": "daprd-down"
+		}
+	]
+}

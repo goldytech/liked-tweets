@@ -12,6 +12,11 @@ from models.tweet import Tweet
 router = APIRouter()
 
 
+@router.get("/healthz", status_code=200)
+def health_check():
+    return {'healthcheck': 'Everything OK!'}
+
+
 @router.get("/liked-tweets", response_model=List[Tweet], status_code=200)
 def get_liked_tweets(api_key: APIKey = Depends(get_api_key)):
     try:
